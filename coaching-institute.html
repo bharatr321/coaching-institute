@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Learning Institute | Transform Your Future</title>
+  <meta name="description" content="Apex Learning Institute offers world-class coaching for IIT-JEE, NEET, UPSC, and professional certification exams. Join 15,000+ students who transformed their careers with us." />
+  <meta name="keywords" content="coaching institute, IIT JEE coaching, NEET coaching, UPSC coaching, best coaching institute, competitive exams" />
+  <meta property="og:title" content="Apex Learning Institute | Transform Your Future" />
+  <meta property="og:description" content="Expert coaching for IIT-JEE, NEET, UPSC, and professional certifications. 98% success rate." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #1a2d42;
+      --navy-light: #243b55;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-pale: #f5e9c8;
+      --cream: #faf7f2;
+      --white: #ffffff;
+      --text-dark: #0d1b2a;
+      --text-mid: #3d5068;
+      --text-light: #6b87a0;
+      --border: rgba(201,168,76,0.25);
+      --shadow: 0 8px 40px rgba(13,27,42,0.12);
+      --shadow-lg: 0 20px 60px rgba(13,27,42,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 2rem;
+      background: rgba(13,27,42,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900; color: var(--navy); font-size: 1.1rem;
+    }
+
+    .logo-text {
+      display: flex; flex-direction: column;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-text span:first-child {
+      color: var(--white); font-size: 1rem; font-weight: 700; line-height: 1.1;
+    }
+
+    .logo-text span:last-child {
+      color: var(--gold); font-size: 0.62rem; letter-spacing: 0.15em;
+      text-transform: uppercase; font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em;
+      padding: 0.5rem 0.9rem; border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); background: rgba(201,168,76,0.1); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+      color: var(--navy) !important; font-weight: 600 !important;
+      padding: 0.5rem 1.2rem !important;
+      border-radius: 6px !important;
+    }
+
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(201,168,76,0.4) !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+    }
+    .hamburger span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(36,59,85,0.6) 0%, transparent 50%);
+    }
+
+    .hero-grid {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: linear-gradient(var(--gold) 1px, transparent 1px), linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+      width: 100%; position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+      padding-top: 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,168,76,0.12); border: 1px solid var(--border);
+      color: var(--gold); font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-badge::before { content: '★'; font-size: 0.7rem; }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.12; font-weight: 900;
+      color: var(--white); margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic; color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem; color: rgba(255,255,255,0.65);
+      line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem;
+      font-weight: 300;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy); font-weight: 700; font-size: 0.95rem;
+      padding: 0.9rem 2rem; border-radius: 8px;
+      border: none; cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.25s; letter-spacing: 0.01em;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.4); }
+
+    .btn-outline {
+      background: transparent; color: var(--white); font-weight: 500;
+      font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.25); cursor: pointer;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.05); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+      background: rgba(201,168,76,0.15); border-radius: 12px; overflow: hidden;
+      margin-top: 3rem;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .stat-item {
+      background: rgba(255,255,255,0.04); padding: 1.5rem 1.2rem; text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem; color: rgba(255,255,255,0.55);
+      margin-top: 0.3rem; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    .hero-visual {
+      position: relative; animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-card-stack {
+      position: relative; height: 460px;
+    }
+
+    .floating-card {
+      position: absolute; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card-main {
+      width: 100%; top: 0; left: 0;
+      background: linear-gradient(145deg, rgba(26,45,66,0.9), rgba(13,27,42,0.95));
+    }
+
+    .card-result {
+      width: 220px; bottom: 40px; right: -20px;
+      background: rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.35);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .card-badge-float {
+      width: 180px; top: 50%; left: -24px;
+      background: rgba(13,27,42,0.95);
+      animation: float 3s 1.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .card-top {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+    }
+
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .card-ttl { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1rem; font-weight: 700; }
+    .card-sub { font-size: 0.75rem; color: var(--gold); font-weight: 500; }
+
+    .course-list-mini { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .course-item-mini {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.04); border-radius: 8px;
+    }
+
+    .course-item-mini span:first-child { color: rgba(255,255,255,0.75); font-size: 0.82rem; }
+    .course-item-mini .pill {
+      font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 20px;
+      background: rgba(201,168,76,0.2); color: var(--gold); font-weight: 600;
+    }
+
+    .result-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .result-avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; font-weight: 700; color: var(--navy);
+    }
+    .result-info { flex: 1; }
+    .result-name { font-size: 0.78rem; color: var(--white); font-weight: 600; }
+    .result-score { font-size: 0.7rem; color: var(--gold); }
+
+    .badge-float-inner { text-align: center; }
+    .badge-float-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); }
+    .badge-float-lbl { font-size: 0.7rem; color: rgba(255,255,255,0.6); }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 100px 2rem; }
+
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 4rem; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem; position: relative;
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: ''; position: absolute; top: 50%;
+      width: 30px; height: 1px; background: var(--gold); opacity: 0.5;
+    }
+    .eyebrow::before { right: calc(100% + 8px); }
+    .eyebrow::after { left: calc(100% + 8px); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 900;
+      line-height: 1.15; color: var(--text-dark);
+    }
+
+    .section-title.light { color: var(--white); }
+
+    .section-desc {
+      margin-top: 1rem; font-size: 1.05rem; color: var(--text-mid);
+      max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7;
+    }
+
+    /* ── WHY US ── */
+    #why {
+      background: var(--white);
+    }
+
+    .features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    }
+
+    .feature-card {
+      padding: 2.5rem 2rem; border-radius: 16px;
+      border: 1px solid rgba(13,27,42,0.07);
+      background: var(--cream); position: relative; overflow: hidden;
+      transition: all 0.3s; cursor: default;
+    }
+
+    .feature-card::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .feature-card:hover::before { transform: scaleX(1); }
+
+    .feature-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 1.5rem;
+      box-shadow: 0 4px 16px rgba(13,27,42,0.2);
+    }
+
+    .feature-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* ── COURSES ── */
+    #courses {
+      background: var(--cream);
+    }
+
+    .courses-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem;
+    }
+
+    .course-card {
+      background: var(--white); border-radius: 20px;
+      overflow: hidden; box-shadow: 0 2px 20px rgba(13,27,42,0.06);
+      transition: all 0.35s; border: 1px solid rgba(13,27,42,0.06);
+    }
+
+    .course-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+    .course-header {
+      padding: 2rem; position: relative;
+      min-height: 140px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    .course-header.blue { background: linear-gradient(135deg, #0d1b2a, #1a3a5c); }
+    .course-header.green { background: linear-gradient(135deg, #0d2a1d, #1a5c3a); }
+    .course-header.purple { background: linear-gradient(135deg, #1d0d2a, #3a1a5c); }
+    .course-header.red { background: linear-gradient(135deg, #2a0d0d, #5c1a1a); }
+    .course-header.teal { background: linear-gradient(135deg, #0d2a2a, #1a5c5c); }
+    .course-header.orange { background: linear-gradient(135deg, #2a1a0d, #5c3a1a); }
+
+    .course-tag {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.12); color: var(--gold-light);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 20px;
+      border: 1px solid rgba(201,168,76,0.3); width: fit-content;
+    }
+
+    .course-icon-big { font-size: 2.5rem; }
+
+    .course-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 700; color: var(--white);
+      line-height: 1.2;
+    }
+
+    .course-body { padding: 1.75rem; }
+
+    .course-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 1.25rem; }
+
+    .course-meta {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem;
+    }
+
+    .meta-chip {
+      display: flex; align-items: center; gap: 0.3rem;
+      font-size: 0.78rem; color: var(--text-mid); font-weight: 500;
+    }
+
+    .meta-chip .dot { color: var(--gold); }
+
+    .course-highlights {
+      list-style: none; display: flex; flex-direction: column; gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .course-highlights li {
+      font-size: 0.83rem; color: var(--text-mid);
+      display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4;
+    }
+
+    .course-highlights li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .course-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 1.25rem; border-top: 1px solid rgba(13,27,42,0.07);
+    }
+
+    .course-price { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); }
+    .course-price span { font-size: 0.75rem; font-family: 'DM Sans', sans-serif; color: var(--text-light); font-weight: 400; }
+
+    .btn-sm {
+      background: var(--navy); color: var(--white); font-size: 0.82rem;
+      font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 8px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-sm:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── SUCCESS STORIES ── */
+    #results {
+      background: var(--navy); position: relative; overflow: hidden;
+    }
+
+    #results::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(201,168,76,0.06), transparent);
+    }
+
+    .results-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: rgba(201,168,76,0.15); border-radius: 16px; overflow: hidden;
+      margin-bottom: 5rem;
+    }
+
+    .result-stat {
+      background: rgba(255,255,255,0.03); padding: 2.5rem 2rem; text-align: center;
+    }
+
+    .result-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; font-weight: 900; color: var(--gold); line-height: 1;
+    }
+
+    .result-lbl { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.4rem; letter-spacing: 0.05em; }
+
+    .toppers-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    }
+
+    .topper-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px; padding: 1.75rem; text-align: center;
+      transition: all 0.3s;
+    }
+
+    .topper-card:hover { background: rgba(201,168,76,0.06); border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
+
+    .topper-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; font-weight: 900; color: var(--navy);
+      border: 2px solid var(--gold);
+    }
+
+    .topper-name { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .topper-rank { color: var(--gold); font-size: 0.82rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .topper-exam { color: rgba(255,255,255,0.5); font-size: 0.75rem; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials {
+      background: var(--white);
+    }
+
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--cream); border-radius: 20px; padding: 2.5rem;
+      position: relative; border: 1px solid rgba(13,27,42,0.06);
+      transition: all 0.3s;
+    }
+
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .testimonial-card::before {
+      content: '"'; position: absolute; top: 1.5rem; right: 2rem;
+      font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1;
+      color: var(--gold); opacity: 0.2;
+    }
+
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1.25rem; letter-spacing: 0.1em; }
+
+    .testimonial-text {
+      font-size: 0.92rem; color: var(--text-mid); line-height: 1.75;
+      margin-bottom: 1.5rem; font-style: italic;
+    }
+
+    .testimonial-author { display: flex; align-items: center; gap: 0.9rem; }
+
+    .author-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: var(--navy); font-size: 0.9rem;
+      flex-shrink: 0; border: 2px solid var(--gold);
+    }
+
+    .author-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .author-detail { font-size: 0.77rem; color: var(--gold); font-weight: 600; }
+
+    /* ── FACULTY ── */
+    #faculty {
+      background: var(--cream);
+    }
+
+    .faculty-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem;
+    }
+
+    .faculty-card {
+      background: var(--white); border-radius: 16px; padding: 1.75rem 1.5rem;
+      text-align: center; border: 1px solid rgba(13,27,42,0.06);
+      transition: all 0.3s;
+    }
+
+    .faculty-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .faculty-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; font-weight: 900; color: var(--white);
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border: 3px solid var(--gold);
+    }
+
+    .faculty-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+    .faculty-subject { font-size: 0.78rem; color: var(--gold); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .faculty-exp { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--navy); position: relative; overflow: hidden;
+    }
+
+    #contact::before {
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.07), transparent 70%);
+      transform: translate(30%, -30%);
+    }
+
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+    }
+
+    .contact-info {}
+
+    .contact-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900;
+      color: var(--white); line-height: 1.15; margin-bottom: 1.5rem;
+    }
+
+    .contact-title em { font-style: italic; color: var(--gold); }
+
+    .contact-desc { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 2.5rem; }
+
+    .contact-points { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .contact-point {
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+
+    .cp-icon {
+      width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+      background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25);
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+
+    .cp-label { font-size: 0.72rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
+    .cp-value { font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 500; }
+
+    /* ── FORM ── */
+    .enquiry-form {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 20px; padding: 2.5rem;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem;
+    }
+
+    .form-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 2rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+
+    .form-group label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px; padding: 0.75rem 1rem;
+      color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      transition: all 0.2s; outline: none; width: 100%;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+    .form-group select option { background: var(--navy-mid); color: var(--white); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold); background: rgba(201,168,76,0.06);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .submit-btn {
+      width: 100%; background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy); font-weight: 700; font-size: 1rem;
+      padding: 1rem; border-radius: 10px; border: none; cursor: pointer;
+      transition: all 0.25s; letter-spacing: 0.02em; font-family: 'DM Sans', sans-serif;
+    }
+
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,168,76,0.35); }
+
+    .form-success {
+      display: none; text-align: center; padding: 2rem;
+    }
+
+    .form-success .check { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h3 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .form-success p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060e17; padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.7;
+      margin-top: 1rem; max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--white); font-size: 0.95rem; font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+    .footer-socials { display: flex; gap: 0.75rem; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; text-decoration: none; transition: all 0.2s; color: rgba(255,255,255,0.5);
+    }
+    .social-btn:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); color: var(--gold); }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none; flex-direction: column;
+      background: var(--navy); padding: 1rem 1.5rem 1.5rem;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem;
+      padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu a:last-child { border-bottom: none; margin-top: 0.5rem; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-box {
+      background: var(--white); border-radius: 20px; max-width: 620px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+    }
+
+    .modal-header {
+      padding: 2rem 2rem 0;
+      display: flex; align-items: flex-start; justify-content: space-between;
+    }
+
+    .modal-close {
+      background: none; border: none; cursor: pointer;
+      font-size: 1.5rem; color: var(--text-mid); padding: 0.25rem;
+      transition: color 0.2s;
+    }
+    .modal-close:hover { color: var(--navy); }
+
+    .modal-body { padding: 1.5rem 2rem 2.5rem; }
+
+    .modal-tag {
+      display: inline-flex; align-items: center;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;
+    }
+
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 900; color: var(--navy); margin-bottom: 1rem;
+    }
+
+    .modal-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.5rem; }
+
+    .modal-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+
+    .modal-detail-item {
+      padding: 0.9rem 1rem; background: var(--cream); border-radius: 10px;
+    }
+    .modal-detail-item .key { font-size: 0.72rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+    .modal-detail-item .val { font-size: 0.9rem; color: var(--navy); font-weight: 600; }
+
+    .modal-curriculum { margin-bottom: 1.5rem; }
+    .modal-curriculum h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem; }
+    .curriculum-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .curriculum-list li { font-size: 0.87rem; color: var(--text-mid); display: flex; gap: 0.5rem; }
+    .curriculum-list li::before { content: '→'; color: var(--gold); font-weight: 700; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .courses-grid { grid-template-columns: repeat(2, 1fr); }
+      .toppers-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 100px; }
+      .hero-visual { display: none; }
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .results-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 70px 1.25rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .courses-grid { grid-template-columns: 1fr; }
+      .toppers-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .faculty-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .modal-details { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .toppers-grid { grid-template-columns: 1fr; }
+      .faculty-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .results-strip { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">A</div>
+      <div class="logo-text">
+        <span>Apex Learning</span>
+        <span>Institute</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#why" onclick="closeMenu()">Why Us</a>
+    <a href="#courses" onclick="closeMenu()">Courses</a>
+    <a href="#results" onclick="closeMenu()">Results</a>
+    <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+    <a href="#faculty" onclick="closeMenu()">Faculty</a>
+    <a href="#contact" onclick="closeMenu()">Enquire Now →</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">India's Most Trusted Coaching Institute</div>
+      <h1 class="hero-title">
+        Where <em>Excellence</em><br>Meets<br><em>Ambition</em>
+      </h1>
+      <p class="hero-sub">
+        From IIT-JEE to UPSC — our expert faculty, proven methodology, and personalised mentorship have helped 15,000+ students achieve their dreams.
+      </p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn-primary">Explore Courses →</a>
+        <a href="#contact" class="btn-outline">Free Counselling</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15K+</div>
+          <div class="stat-label">Students Placed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">22 Yrs</div>
+          <div class="stat-label">Of Excellence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="floating-card card-main">
+          <div class="card-top">
+            <div class="card-icon">🎓</div>
+            <div>
+              <div class="card-ttl">Apex Learning</div>
+              <div class="card-sub">2024–25 Batch Open</div>
+            </div>
+          </div>
+          <div class="course-list-mini">
+            <div class="course-item-mini"><span>IIT-JEE Advanced</span><span class="pill">Seats Left: 12</span></div>
+            <div class="course-item-mini"><span>NEET UG</span><span class="pill">Seats Left: 8</span></div>
+            <div class="course-item-mini"><span>UPSC Civil Services</span><span class="pill">Seats Left: 15</span></div>
+            <div class="course-item-mini"><span>CAT MBA Prep</span><span class="pill">Seats Left: 20</span></div>
+          </div>
+        </div>
+
+        <div class="floating-card card-result">
+          <div style="font-size:0.72rem; color:var(--gold); font-weight:700; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.1em;">🏆 Top Results 2024</div>
+          <div class="result-row">
+            <div class="result-avatar" style="background:linear-gradient(135deg,#ffd700,#ffb300);">P</div>
+            <div class="result-info">
+              <div class="result-name">Priya Sharma</div>
+              <div class="result-score">AIR 7 – IIT-JEE</div>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-avatar" style="background:linear-gradient(135deg,#4fc3f7,#0288d1);">R</div>
+            <div class="result-info">
+              <div class="result-name">Rahul Singh</div>
+              <div class="result-score">AIR 12 – NEET</div>
+            </div>
+          </div>
+          <div class="result-row">
+            <div class="result-avatar" style="background:linear-gradient(135deg,#a5d6a7,#2e7d32);">A</div>
+            <div class="result-info">
+              <div class="result-name">Ananya Gupta</div>
+              <div class="result-score">AIR 3 – UPSC</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-card card-badge-float">
+          <div class="badge-float-inner">
+            <div style="font-size:1.5rem;margin-bottom:0.25rem;">⭐</div>
+            <div class="badge-float-num">4.9</div>
+            <div class="badge-float-lbl">Rating · 2,400 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="eyebrow">Why Choose Apex</div>
+      <h2 class="section-title">Built for Students Who<br>Refuse to Settle</h2>
+      <p class="section-desc">Our proven system combines rigorous academics with personalised mentorship — designed to get you results.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🧑‍🏫</div>
+        <div class="feature-title">IIT & IIM Alumni Faculty</div>
+        <p class="feature-desc">Learn from educators who've been where you want to go. Our faculty have first-hand experience of every exam they teach.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">AI-Powered Analytics</div>
+        <p class="feature-desc">Personalised performance dashboards track every student's progress in real-time, identifying gaps before they become problems.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📚</div>
+        <div class="feature-title">7,000+ Practice Questions</div>
+        <p class="feature-desc">Our question bank is updated every year with pattern-matched problems aligned to the latest exam trends.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🕐</div>
+        <div class="feature-title">Flexible Batch Timings</div>
+        <p class="feature-desc">Morning, evening, weekend, and online batches ensure you never have to choose between school, college, and coaching.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Test Series & Mock Exams</div>
+        <p class="feature-desc">Weekly chapter tests and full-length mock papers simulate real exam conditions to build speed, accuracy, and confidence.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">💬</div>
+        <div class="feature-title">1-on-1 Doubt Sessions</div>
+        <p class="feature-desc">No student is left behind. Dedicated doubt-clearing sessions ensure every question gets answered — when you need it most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COURSES ══ -->
+<section id="courses">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="eyebrow">Our Programmes</div>
+      <h2 class="section-title">Find Your Course</h2>
+      <p class="section-desc">From engineering to medicine to civil services — we have a programme for every ambition.</p>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card reveal">
+        <div class="course-header blue">
+          <div class="course-tag">⚡ Engineering</div>
+          <div>
+            <div class="course-icon-big">⚙️</div>
+            <div class="course-name">IIT-JEE Main & Advanced</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Our flagship engineering programme has produced 200+ IIT toppers. Covers Physics, Chemistry & Maths with weekly tests.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 2 Years</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Grade 11–12</span>
+          </div>
+          <ul class="course-highlights">
+            <li>Daily 6-hour classroom sessions</li>
+            <li>Weekly full-length mock tests</li>
+            <li>Recorded lecture access</li>
+            <li>Scholarship for top performers</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹1,20,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('jee')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-header green">
+          <div class="course-tag">🩺 Medical</div>
+          <div>
+            <div class="course-icon-big">🔬</div>
+            <div class="course-name">NEET UG Preparation</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Comprehensive Biology, Physics & Chemistry coaching with NCERT-aligned study material and 1,000+ NEET pattern MCQs.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 1–2 Years</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Grade 11–12</span>
+          </div>
+          <ul class="course-highlights">
+            <li>NCERT-focused deep dive</li>
+            <li>Chapter-wise test series</li>
+            <li>Biology diagram sessions</li>
+            <li>Personalised rank predictor</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹1,10,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('neet')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-header purple">
+          <div class="course-tag">🏛️ Civil Services</div>
+          <div>
+            <div class="course-icon-big">📜</div>
+            <div class="course-name">UPSC IAS/IPS Programme</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Prelims to Interview — our holistic UPSC programme includes GS, CSAT, Optional Subject and Answer Writing skills.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 18 Months</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Graduates</span>
+          </div>
+          <ul class="course-highlights">
+            <li>Daily newspaper analysis</li>
+            <li>Answer writing workshops</li>
+            <li>Mock interview sessions</li>
+            <li>Optional subject coaching</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹1,50,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('upsc')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-header teal">
+          <div class="course-tag">💼 Management</div>
+          <div>
+            <div class="course-icon-big">📈</div>
+            <div class="course-name">CAT / MBA Entrance</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Crack CAT, XAT, SNAP & IIFT with our structured programme covering Quant, Verbal, DILR and GD-PI mentoring.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 12 Months</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Graduates</span>
+          </div>
+          <ul class="course-highlights">
+            <li>Covers CAT, XAT, SNAP, IIFT</li>
+            <li>GD-PI preparation included</li>
+            <li>Industry expert guest lectures</li>
+            <li>50+ full mock tests</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹90,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('cat')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-header red">
+          <div class="course-tag">🏦 Banking</div>
+          <div>
+            <div class="course-icon-big">💳</div>
+            <div class="course-name">IBPS / SBI / RBI Exams</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Targeted preparation for Banking & Finance exams including PO, Clerk, SO, and RBI Grade B with exhaustive practice sets.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 6 Months</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Graduates</span>
+          </div>
+          <ul class="course-highlights">
+            <li>Quant, Reasoning & English</li>
+            <li>Banking awareness module</li>
+            <li>100+ sectional tests</li>
+            <li>Speed & accuracy drills</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹45,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('banking')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-header orange">
+          <div class="course-tag">🎒 Foundation</div>
+          <div>
+            <div class="course-icon-big">🌱</div>
+            <div class="course-name">Grade 8–10 Foundation</div>
+          </div>
+        </div>
+        <div class="course-body">
+          <p class="course-desc">Build a rock-solid conceptual foundation in Science & Maths for students in Grade 8–10, aligned to board exams & Olympiads.</p>
+          <div class="course-meta">
+            <span class="meta-chip"><span class="dot">●</span> 1–3 Years</span>
+            <span class="meta-chip"><span class="dot">●</span> Offline + Online</span>
+            <span class="meta-chip"><span class="dot">●</span> Grade 8–10</span>
+          </div>
+          <ul class="course-highlights">
+            <li>Board + Olympiad prep</li>
+            <li>Conceptual clarity focus</li>
+            <li>Regular parent updates</li>
+            <li>Scholarship opportunities</li>
+          </ul>
+          <div class="course-footer">
+            <div class="course-price">₹60,000 <span>/ year</span></div>
+            <button class="btn-sm" onclick="openModal('foundation')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="results">
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <div class="section-header reveal">
+      <div class="eyebrow" style="color:var(--gold)">Our Success Story</div>
+      <h2 class="section-title light">Numbers That<br><em style="color:var(--gold);font-style:italic;">Speak for Themselves</em></h2>
+    </div>
+
+    <div class="results-strip reveal">
+      <div class="result-stat">
+        <div class="result-num">15,200+</div>
+        <div class="result-lbl">Students Enrolled</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-num">98.3%</div>
+        <div class="result-lbl">Selection Rate</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-num">847</div>
+        <div class="result-lbl">IIT Selections (2024)</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-num">312</div>
+        <div class="result-lbl">UPSC Selections</div>
+      </div>
+    </div>
+
+    <div class="section-header reveal" style="margin-bottom:2rem;">
+      <div class="eyebrow" style="color:var(--gold);">Hall of Fame</div>
+      <h3 class="section-title light" style="font-size:1.8rem;">Our 2024 Toppers</h3>
+    </div>
+
+    <div class="toppers-grid reveal">
+      <div class="topper-card">
+        <div class="topper-avatar" style="background:linear-gradient(135deg,#ffd700,#ffb300);">PS</div>
+        <div class="topper-name">Priya Sharma</div>
+        <div class="topper-rank">AIR 7 · IIT-JEE Advanced</div>
+        <div class="topper-exam">Pursuing CS @ IIT Bombay</div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-avatar" style="background:linear-gradient(135deg,#4fc3f7,#0288d1);">RK</div>
+        <div class="topper-name">Rahul Kumar</div>
+        <div class="topper-rank">AIR 12 · NEET UG</div>
+        <div class="topper-exam">MBBS @ AIIMS Delhi</div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-avatar" style="background:linear-gradient(135deg,#a5d6a7,#2e7d32);">AG</div>
+        <div class="topper-name">Ananya Gupta</div>
+        <div class="topper-rank">AIR 3 · UPSC CSE</div>
+        <div class="topper-exam">IAS Officer, Batch 2024</div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-avatar" style="background:linear-gradient(135deg,#f48fb1,#c2185b);">VM</div>
+        <div class="topper-name">Vikram Mehta</div>
+        <div class="topper-rank">99.8 %ile · CAT 2024</div>
+        <div class="topper-exam">IIM Ahmedabad MBA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="eyebrow">Student Stories</div>
+      <h2 class="section-title">Real Students,<br>Real Results</h2>
+      <p class="section-desc">Hear from those who took the leap — and never looked back.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Apex didn't just teach me Physics — they taught me how to think. The faculty's approach to problem-solving completely transformed my exam strategy. Got AIR 7 in JEE Advanced!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#ffd700,#ffb300);">PS</div>
+          <div>
+            <div class="author-name">Priya Sharma</div>
+            <div class="author-detail">AIR 7 · IIT-JEE Advanced 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"After two failed attempts elsewhere, Apex's UPSC programme changed everything. The answer writing workshops and mock interviews were as close to the real thing as it gets."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#a5d6a7,#2e7d32);">AG</div>
+          <div>
+            <div class="author-name">Ananya Gupta</div>
+            <div class="author-detail">IAS Officer · UPSC CSE AIR 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The CAT programme here is unmatched. The personalized study plan, the mock tests, and the GD-PI prep gave me the edge I needed. Heading to IIM-A this year — dreams do come true!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#f48fb1,#c2185b);">VM</div>
+          <div>
+            <div class="author-name">Vikram Mehta</div>
+            <div class="author-detail">99.8%ile CAT · IIM Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The NEET faculty here explained Biology in a way no textbook ever could. My rank jumped from 8,000 to 12 in one year of focused coaching at Apex."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#4fc3f7,#0288d1);">RK</div>
+          <div>
+            <div class="author-name">Rahul Kumar</div>
+            <div class="author-detail">AIR 12 · NEET UG 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As a working professional preparing for banking exams, Apex's weekend batches were a lifesaver. Cleared IBPS PO in my very first attempt. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#ce93d8,#7b1fa2);">SR</div>
+          <div>
+            <div class="author-name">Sunita Rao</div>
+            <div class="author-detail">IBPS PO 2024 · SBI Branch Manager</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"My son joined the Foundation programme in Grade 8. By Grade 10, he was tops in class and had already qualified for the National Science Olympiad. Worth every rupee."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#ffcc80,#e65100);">MJ</div>
+          <div>
+            <div class="author-name">Mrs. Meena Joshi</div>
+            <div class="author-detail">Parent · Foundation Programme</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FACULTY ══ -->
+<section id="faculty">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="eyebrow">Meet the Team</div>
+      <h2 class="section-title">Faculty Who've<br>Walked the Path</h2>
+      <p class="section-desc">Every teacher at Apex is an achiever in their field — not just an educator.</p>
+    </div>
+
+    <div class="faculty-grid">
+      <div class="faculty-card reveal">
+        <div class="faculty-avatar">RV</div>
+        <div class="faculty-name">Dr. Rajan Verma</div>
+        <div class="faculty-subject">Physics · JEE</div>
+        <div class="faculty-exp">IIT Delhi alumnus · 18 years teaching experience · Author of 3 Physics textbooks</div>
+      </div>
+      <div class="faculty-card reveal">
+        <div class="faculty-avatar">SS</div>
+        <div class="faculty-name">Prof. Sonal Shah</div>
+        <div class="faculty-subject">Biology · NEET</div>
+        <div class="faculty-exp">AIIMS graduate · Former researcher · 14 years of NEET coaching expertise</div>
+      </div>
+      <div class="faculty-card reveal">
+        <div class="faculty-avatar">AP</div>
+        <div class="faculty-name">Amit Prakash IAS</div>
+        <div class="faculty-subject">GS & Current Affairs</div>
+        <div class="faculty-exp">Ex-IAS officer, Rajasthan cadre · 10 years mentoring UPSC aspirants</div>
+      </div>
+      <div class="faculty-card reveal">
+        <div class="faculty-avatar">NK</div>
+        <div class="faculty-name">Neha Khurana</div>
+        <div class="faculty-subject">Quant & DI · CAT</div>
+        <div class="faculty-exp">IIM Calcutta alumna · 99.5%ile CAT achiever · 12 years in MBA coaching</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <div class="contact-layout">
+      <div class="contact-info reveal">
+        <div class="eyebrow" style="color:var(--gold);">Get in Touch</div>
+        <h2 class="contact-title">Start Your<br><em>Journey Today</em></h2>
+        <p class="contact-desc">Our counsellors are here to help you choose the right programme and answer every question — no obligation, completely free.</p>
+
+        <div class="contact-points">
+          <div class="contact-point">
+            <div class="cp-icon">📍</div>
+            <div>
+              <div class="cp-label">Visit Us</div>
+              <div class="cp-value">42, Knowledge Park, Sector 18,<br>Noida, Uttar Pradesh – 201301</div>
+            </div>
+          </div>
+          <div class="contact-point">
+            <div class="cp-icon">📞</div>
+            <div>
+              <div class="cp-label">Call Us</div>
+              <div class="cp-value">+91 98100 12345 · +91 11 4567 8900</div>
+            </div>
+          </div>
+          <div class="contact-point">
+            <div class="cp-icon">✉️</div>
+            <div>
+              <div class="cp-label">Email</div>
+              <div class="cp-value">admissions@apexlearning.in</div>
+            </div>
+          </div>
+          <div class="contact-point">
+            <div class="cp-icon">🕐</div>
+            <div>
+              <div class="cp-label">Hours</div>
+              <div class="cp-value">Mon – Sat: 8:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="enquiry-form" id="enquiryForm">
+          <div class="form-title">Request Free Counselling</div>
+          <div class="form-sub">We'll reach out within 24 hours.</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="e.g. Arjun" id="fname" />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="e.g. Mehta" id="lname" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="+91 98XXX XXXXX" id="phone" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@email.com" id="email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Course Interested In *</label>
+            <select id="course">
+              <option value="">— Select a Programme —</option>
+              <option>IIT-JEE Main & Advanced</option>
+              <option>NEET UG</option>
+              <option>UPSC IAS/IPS</option>
+              <option>CAT / MBA Entrance</option>
+              <option>IBPS / SBI / Banking Exams</option>
+              <option>Grade 8–10 Foundation</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Class / Grade</label>
+              <select id="grade">
+                <option value="">— Select —</option>
+                <option>Class 8</option><option>Class 9</option><option>Class 10</option>
+                <option>Class 11</option><option>Class 12</option><option>12th Passed</option>
+                <option>Graduate</option><option>Working Professional</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Batch</label>
+              <select id="batch">
+                <option value="">— Select —</option>
+                <option>Morning (7–10 AM)</option>
+                <option>Afternoon (12–3 PM)</option>
+                <option>Evening (5–8 PM)</option>
+                <option>Weekend Only</option>
+                <option>Online Batch</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Any specific questions or message?</label>
+            <textarea placeholder="Tell us about your goals, previous attempts, or anything you'd like us to know..." id="message"></textarea>
+          </div>
+
+          <button class="submit-btn" onclick="submitForm()">
+            Send Enquiry — Get Free Guidance →
+          </button>
+        </div>
+
+        <div class="form-success" id="formSuccess" style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.2);border-radius:20px;padding:3rem 2rem;">
+          <div class="check">🎉</div>
+          <h3>Thank You!</h3>
+          <p style="color:rgba(255,255,255,0.6);">Your enquiry has been received. One of our counsellors will reach out within 24 hours. We're excited to be part of your journey!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-mark">A</div>
+          <div class="logo-text">
+            <span>Apex Learning</span>
+            <span>Institute</span>
+          </div>
+        </a>
+        <p>Shaping India's brightest futures since 2003. Trusted by 15,000+ students across 22 cities.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Programmes</h4>
+        <ul>
+          <li><a href="#courses">IIT-JEE Coaching</a></li>
+          <li><a href="#courses">NEET Preparation</a></li>
+          <li><a href="#courses">UPSC Civil Services</a></li>
+          <li><a href="#courses">CAT / MBA</a></li>
+          <li><a href="#courses">Banking Exams</a></li>
+          <li><a href="#courses">Foundation (8–10)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#why">Why Apex</a></li>
+          <li><a href="#results">Results 2024</a></li>
+          <li><a href="#testimonials">Student Reviews</a></li>
+          <li><a href="#faculty">Our Faculty</a></li>
+          <li><a href="#contact">Free Counselling</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919810012345">+91 98100 12345</a></li>
+          <li><a href="mailto:admissions@apexlearning.in">admissions@apexlearning.in</a></li>
+          <li><a href="#">42, Knowledge Park, Noida</a></li>
+          <li><a href="#">Student Portal Login</a></li>
+          <li><a href="#">Scholarship Apply</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Apex Learning Institute Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-socials">
+        <a class="social-btn" href="#" title="Facebook">f</a>
+        <a class="social-btn" href="#" title="Instagram">ig</a>
+        <a class="social-btn" href="#" title="YouTube">▶</a>
+        <a class="social-btn" href="#" title="Telegram">✈</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ COURSE DETAIL MODAL ══ -->
+<div class="modal-overlay" id="courseModal" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-tag" id="modalTag">Loading...</div>
+        <h2 class="modal-title" id="modalTitle">Course Title</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-details" id="modalDetails"></div>
+      <div class="modal-curriculum" id="modalCurriculum"></div>
+      <a href="#contact" class="btn-primary" onclick="closeModal()" style="width:100%;justify-content:center;display:flex;">
+        Enquire About This Course →
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── Mobile Menu ──
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // ── Scroll Reveal ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Form Submit ──
+  function submitForm() {
+    const fname = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const course = document.getElementById('course').value;
+    if (!fname || !phone || !course) {
+      alert('Please fill in your name, phone number, and select a course.');
+      return;
+    }
+    document.getElementById('enquiryForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // ── Course Modal Data ──
+  const courses = {
+    jee: {
+      tag: '⚡ Engineering · 2 Years',
+      title: 'IIT-JEE Main & Advanced',
+      desc: 'Our premier engineering entrance programme is designed to take students from foundational concepts to advanced problem-solving. With daily 6-hour sessions, weekly mock tests, and dedicated doubt-clearing, this programme has produced 200+ IIT selections in 2024 alone.',
+      details: [
+        { key: 'Duration', val: '2 Years (Class 11–12)' },
+        { key: 'Subjects', val: 'Physics, Chemistry, Maths' },
+        { key: 'Batch Size', val: 'Max 30 students' },
+        { key: 'Fee', val: '₹1,20,000 / year' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'April 15, 2025' },
+      ],
+      curriculum: ['Complete NCERT + JEE syllabus coverage', 'Daily 6-hour classroom sessions', 'Weekly full-length JEE-pattern mock tests', 'Chapter-wise test series (500+ tests)', 'Recorded lectures for revision', 'Doubt-clearing sessions (daily)', 'Scholarship for top performers', 'JEE Advanced specialisation module']
+    },
+    neet: {
+      tag: '🩺 Medical · 1–2 Years',
+      title: 'NEET UG Preparation',
+      desc: 'Comprehensive preparation for NEET-UG covering Biology, Physics & Chemistry. Our NCERT-aligned curriculum, combined with 1,000+ NEET-pattern MCQs and dedicated Biology diagram sessions, has helped students achieve top ranks consistently.',
+      details: [
+        { key: 'Duration', val: '1–2 Years' },
+        { key: 'Subjects', val: 'Biology, Physics, Chemistry' },
+        { key: 'Batch Size', val: 'Max 30 students' },
+        { key: 'Fee', val: '₹1,10,000 / year' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'April 15, 2025' },
+      ],
+      curriculum: ['Complete NCERT Biology, Physics, Chemistry', '1,000+ NEET-pattern MCQs', 'Biology diagram & labelling sessions', 'Chapter-wise + full-length mock tests', 'Rank predictor tool access', 'AIIMS & JIPMER special modules', 'Daily revision quizzes', 'One-on-one mentorship sessions']
+    },
+    upsc: {
+      tag: '🏛️ Civil Services · 18 Months',
+      title: 'UPSC IAS/IPS Programme',
+      desc: 'A holistic Prelims-to-Interview programme covering all GS papers, CSAT, optional subjects, and answer writing. Led by ex-IAS officers and UPSC rankers, this programme has produced 312 IAS/IPS officers to date.',
+      details: [
+        { key: 'Duration', val: '18 Months' },
+        { key: 'Eligibility', val: 'Graduates (any stream)' },
+        { key: 'Batch Size', val: 'Max 40 students' },
+        { key: 'Fee', val: '₹1,50,000 / year' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'May 1, 2025' },
+      ],
+      curriculum: ['GS Paper I, II, III, IV — complete coverage', 'CSAT reasoning & comprehension', 'Daily newspaper analysis sessions', 'Answer writing workshops (weekly)', '5 full Prelims mock exams', '3 full Mains mock exams', 'Mock interview & personality test prep', 'Optional subject coaching (choose from 10+)']
+    },
+    cat: {
+      tag: '💼 Management · 12 Months',
+      title: 'CAT / MBA Entrance',
+      desc: 'A rigorous 12-month programme for CAT, XAT, SNAP, and IIFT covering Quant, VARC, DILR along with GD-PI preparation led by IIM alumni. 50+ full mock tests ensure exam-day confidence.',
+      details: [
+        { key: 'Duration', val: '12 Months' },
+        { key: 'Covers', val: 'CAT, XAT, SNAP, IIFT' },
+        { key: 'Batch Size', val: 'Max 35 students' },
+        { key: 'Fee', val: '₹90,000 / year' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'June 1, 2025' },
+      ],
+      curriculum: ['Quantitative Aptitude (advanced)', 'Verbal Ability & Reading Comprehension', 'Data Interpretation & Logical Reasoning', '50+ full-length CAT mock tests', 'XAT, SNAP, IIFT special modules', 'GD-PI preparation with IIM panellists', 'Personal interview mock sessions', 'Resume & SOP writing support']
+    },
+    banking: {
+      tag: '🏦 Banking · 6 Months',
+      title: 'IBPS / SBI / Banking Exams',
+      desc: 'Targeted 6-month programme for IBPS PO, Clerk, SO, SBI PO/Clerk, and RBI Grade B. Covers Reasoning, Quant, English, GA, and Computer Knowledge with 100+ sectional tests.',
+      details: [
+        { key: 'Duration', val: '6 Months' },
+        { key: 'Exams', val: 'IBPS PO/Clerk, SBI, RBI' },
+        { key: 'Batch Size', val: 'Max 50 students' },
+        { key: 'Fee', val: '₹45,000 / 6 months' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'Rolling Admissions' },
+      ],
+      curriculum: ['Quantitative Aptitude', 'Reasoning Ability (Verbal + Non-verbal)', 'English Language', 'General Awareness & Banking Knowledge', 'Computer Awareness', '100+ sectional tests', '20+ full-length mock exams', 'Interview preparation (PO level)']
+    },
+    foundation: {
+      tag: '🎒 Foundation · 1–3 Years',
+      title: 'Grade 8–10 Foundation',
+      desc: 'A multi-year foundation programme building conceptual clarity in Science and Mathematics for students in grades 8 to 10. Aligned to CBSE/ICSE boards and Science/Maths Olympiads.',
+      details: [
+        { key: 'Duration', val: '1–3 Years (Grade 8–10)' },
+        { key: 'Subjects', val: 'Science + Mathematics' },
+        { key: 'Batch Size', val: 'Max 25 students' },
+        { key: 'Fee', val: '₹60,000 / year' },
+        { key: 'Mode', val: 'Offline + Online (Hybrid)' },
+        { key: 'Start Date', val: 'April & July batches' },
+      ],
+      curriculum: ['CBSE/ICSE Science (Physics, Chem, Bio)', 'Mathematics (Algebra, Geometry, Calculus intro)', 'National Science & Maths Olympiad prep', 'Board exam chapter tests', 'Scholarship & talent hunt tests', 'Regular parent-teacher meetings', 'Critical thinking & problem-solving workshops', 'Early JEE/NEET concept introduction']
+    }
+  };
+
+  function openModal(id) {
+    const d = courses[id];
+    if (!d) return;
+    document.getElementById('modalTag').textContent = d.tag;
+    document.getElementById('modalTitle').textContent = d.title;
+    document.getElementById('modalDesc').textContent = d.desc;
+    document.getElementById('modalDetails').innerHTML = d.details.map(i =>
+      `<div class="modal-detail-item"><div class="key">${i.key}</div><div class="val">${i.val}</div></div>`
+    ).join('');
+    document.getElementById('modalCurriculum').innerHTML = `
+      <h4>What's Included</h4>
+      <ul class="curriculum-list">${d.curriculum.map(c => `<li>${c}</li>`).join('')}</ul>
+    `;
+    document.getElementById('courseModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('courseModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target.id === 'courseModal') closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
